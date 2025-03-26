@@ -1,0 +1,157 @@
+/* Basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: "Tektur", sans-serif; /* Changed font family */
+    font-size: 18px; /* Increased font size */
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('Images/GB-BG.png'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header with a navbar */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: url(Images/Nav-color.png); /* Gold linear gradient */
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.navbar h1 {
+    font-size: 42px; /* Increased font size */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 22px; /* Increased font size */
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin: 20px 0;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    border: 5px groove gold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px; /* Increased font size */
+}
+
+#home {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+#services {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#about {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#gallery {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#contact {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Gallery */
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 16px; /* Increased font size */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Apply transition to the body when the page loads */
+body {
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease-in; /* Transition effect for opacity */
+}
+
+/* When the page is fully loaded, set the opacity to 1 */
+body.loaded {
+    opacity: 1;
+}
